@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="472.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="converter.Controller">
+    <children>
+        <TextField fx:id="inputNumber" layoutX="23.0" layoutY="112.0" prefHeight="47.0" prefWidth="302.0" promptText="Введите число для перевода">
+            <font>
+                <Font name="Cartonsix NC" size="21.0" />
+            </font></TextField>
+        <TextField fx:id="newAmount" layoutX="71.0" layoutY="370.0" onAction="#result" prefHeight="47.0" prefWidth="201.0" promptText="Результат">
+            <font>
+                <Font name="Cartonsix NC" size="27.0" />
+            </font></TextField>
+
+        <ComboBox fx:id="comboBox2" layoutX="192.0" layoutY="228.0" prefHeight="47.0" prefWidth="127.0" promptText="ед.измерения">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="мм" />
+                    <String fx:value="см" />
+                    <String fx:value="дм" />
+                    <String fx:value="м" />
+                    <String fx:value="км" />
+
+
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ComboBox fx:id="comboBox1" layoutX="24.0" layoutY="228.0" prefHeight="47.0" prefWidth="127.0" promptText="ед.измерения">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="см" />
+                    <String fx:value="дм" />
+                    <String fx:value="м" />
+                    <String fx:value="км" />
+                    <String fx:value="мм" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <AnchorPane prefHeight="104.0" prefWidth="348.0" style="-fx-background-color: ffa500;">
+            <children>
+                <Text fontSmoothingType="LCD" layoutX="33.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Конвертер" textAlignment="CENTER" wrappingWidth="282.69818115234375">
+                    <font>
+                        <Font size="50.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <Text fill="#212a6b" layoutX="251.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="в">
+            <font>
+                <Font name="Cartonsix NC" size="36.0" />
+            </font>
+        </Text>
+        <Text fill="#212a6b" layoutX="69.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="из">
+            <font>
+                <Font name="Cartonsix NC" size="36.0" />
+            </font>
+        </Text>
+        <Button fx:id="buttonResult" layoutX="83.0" layoutY="304.0" mnemonicParsing="false" onAction="#result" prefHeight="57.0" prefWidth="178.0" text="Посчитать">
+            <font>
+                <Font name="Cartonsix NC" size="27.0" />
+            </font>
+        </Button>
+
+
+
+
+    </children>
+</AnchorPane>
